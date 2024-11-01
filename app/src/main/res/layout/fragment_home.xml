@@ -1,14 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/teal_200"
-    tools:context=".files.HomeFragment">
-
-    <TextView
+    tools:context=".HomeFragment">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/btn_lyo_Frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:layout_constraintEnd_toStartOf="@id/btn_lyo_Linear"
+        app:layout_constraintBottom_toTopOf="@id/btn_day_picker"
+        android:text="LYO Frame" />
+    <Button
+        android:id="@+id/btn_lyo_Linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_lyo_Frame"
+        app:layout_constraintTop_toTopOf="@id/btn_lyo_Frame"
+        app:layout_constraintBottom_toBottomOf="@id/btn_lyo_Frame"
+        app:layout_constraintEnd_toStartOf="@id/btn_lyo_constraint"
+        android:text="LYO Linear" />
+    <Button
+        android:id="@+id/btn_lyo_constraint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_lyo_Linear"
+        app:layout_constraintTop_toTopOf="@id/btn_lyo_Frame"
+        app:layout_constraintBottom_toBottomOf="@id/btn_lyo_Frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="LYO Constraint" />
+    <Button
+        android:id="@+id/btn_day_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_lyo_Frame"
+        app:layout_constraintEnd_toStartOf="@id/btn_time_picker"
+        app:layout_constraintBottom_toTopOf="@id/btn_mvvm"
+        android:text="Day Picker" />
+    <Button
+        android:id="@+id/btn_time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_day_picker"
+        app:layout_constraintTop_toTopOf="@id/btn_day_picker"
+        app:layout_constraintBottom_toBottomOf="@id/btn_day_picker"
+        app:layout_constraintEnd_toStartOf="@id/btn_perritos"
+        android:text="Day Picker" />
+    <Button
+        android:id="@+id/btn_perritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_time_picker"
+        app:layout_constraintTop_toTopOf="@id/btn_day_picker"
+        app:layout_constraintBottom_toBottomOf="@id/btn_day_picker"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Perritos" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_mvvm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/btn_lyo_Frame"
+        app:layout_constraintTop_toBottomOf="@id/btn_day_picker"
+        app:layout_constraintEnd_toStartOf="@id/btn_chips"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="MVVM" />
+    <Button
+        android:id="@+id/btn_chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_mvvm"
+        app:layout_constraintTop_toTopOf="@id/btn_mvvm"
+        app:layout_constraintBottom_toBottomOf="@id/btn_mvvm"
+        app:layout_constraintEnd_toStartOf="@id/btn_rv"
+        android:text="Chips" />
+    <Button
+        android:id="@+id/btn_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_chips"
+        app:layout_constraintTop_toTopOf="@id/btn_mvvm"
+        app:layout_constraintBottom_toBottomOf="@id/btn_mvvm"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="RV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

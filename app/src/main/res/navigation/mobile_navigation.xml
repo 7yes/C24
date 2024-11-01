@@ -7,7 +7,83 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.jesse.c24.files.HomeFragment"
+        android:name="com.jesse.c24.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_chipsFragment"
+            app:destination="@id/chipsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dayPickerFragment"
+            app:destination="@id/dayPickerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ltoLinearFragment"
+            app:destination="@id/ltoLinearFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_lyoConstrainFragment"
+            app:destination="@id/lyoConstrainFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_lyoFrameFragment"
+            app:destination="@id/lyoFrameFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_MVVMFragment"
+            app:destination="@id/MVVMFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rvFragment"
+            app:destination="@id/rvFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_timePickerFragment"
+            app:destination="@id/timePickerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_perritosFragment"
+            app:destination="@id/perritosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chipsFragment"
+        android:name="com.jesse.c24.g3.ChipsFragment"
+        android:label="fragment_chips"
+        tools:layout="@layout/fragment_chips" />
+    <fragment
+        android:id="@+id/dayPickerFragment"
+        android:name="com.jesse.c24.g2.DayPickerFragment"
+        android:label="fragment_day_picker"
+        tools:layout="@layout/fragment_day_picker" />
+    <fragment
+        android:id="@+id/ltoLinearFragment"
+        android:name="com.jesse.c24.g1.LtoLinearFragment"
+        android:label="fragment_lto_linear"
+        tools:layout="@layout/fragment_lto_linear" />
+    <fragment
+        android:id="@+id/lyoConstrainFragment"
+        android:name="com.jesse.c24.g1.LyoConstrainFragment"
+        android:label="fragment_lyo_constrain"
+        tools:layout="@layout/fragment_lyo_constrain" />
+    <fragment
+        android:id="@+id/lyoFrameFragment"
+        android:name="com.jesse.c24.g1.LyoFrameFragment"
+        android:label="fragment_lyo_frame"
+        tools:layout="@layout/fragment_lyo_frame" />
+    <fragment
+        android:id="@+id/MVVMFragment"
+        android:name="com.jesse.c24.g3.MVVMFragment"
+        android:label="fragment_m_v_v_m"
+        tools:layout="@layout/fragment_m_v_v_m" />
+    <fragment
+        android:id="@+id/perritosFragment"
+        android:name="com.jesse.c24.g2.PerritosFragment"
+        android:label="fragment_perritos"
+        tools:layout="@layout/fragment_perritos" />
+    <fragment
+        android:id="@+id/rvFragment"
+        android:name="com.jesse.c24.g3.RvFragment"
+        android:label="fragment_rv"
+        tools:layout="@layout/fragment_rv" />
+    <fragment
+        android:id="@+id/timePickerFragment"
+        android:name="com.jesse.c24.g2.TimePickerFragment"
+        android:label="fragment_time_picker"
+        tools:layout="@layout/fragment_time_picker" />
 </navigation>
