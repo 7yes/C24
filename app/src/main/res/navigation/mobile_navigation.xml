@@ -73,7 +73,7 @@
         tools:layout="@layout/fragment_m_v_v_m" />
     <fragment
         android:id="@+id/perritosFragment"
-        android:name="com.jesse.c24.g2.PerritosFragment"
+        android:name="com.jesse.c24.g2.perritos.PerritosFragment"
         android:label="fragment_perritos"
         tools:layout="@layout/fragment_perritos" />
     <fragment

@@ -13,6 +13,11 @@ class RvFragment : Fragment() {
     private var _binding: FragmentRvBinding? = null
     private val binding get() = _binding!!
 
+    val gameList = listOf<GameModel>(GameModel("Mario", 312, "error con data"),
+        GameModel("Contra", 1322, "error con licencia"),
+        GameModel("PacMan", 42, "")
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,3 +31,7 @@ class RvFragment : Fragment() {
         _binding = null
     }
 }
+
+//sealed Class
+
+data class GameModel(val title: String, val serialNumber: Int, val error: String)

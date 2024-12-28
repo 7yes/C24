@@ -5,19 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.jesse.c24.databinding.FragmentChipsBinding
+import com.jesse.c24.databinding.FragmentMVVMBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MVVMFragment : Fragment() {
-    private var _binding: FragmentChipsBinding? = null
+    private var _binding: FragmentMVVMBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentChipsBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentMVVMBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
